@@ -4,12 +4,15 @@
 # w = 35.74 + 0.6215 t + (0.4275 t - 35.75) v0.16
 
 # Compose a program that takes two floats t and v from the command-line and writes the wind chill. Note: the formula is not valid if t is larger than 50 in absolute value or if  v is larger than 120 or less than 3 (you may assume that the values you get are in that range).
-
-# HEADER
+#################################################3
+# 
+# Wind Chill Calculation
+# By Aaron Raycove
+# 01/31/2025 (I think)
 # Solves the problem statement above
 # accepts two inputs
 # prints the result to the console in a formatted f string
-
+#####################################################################
 import sys
 import stdio
 
