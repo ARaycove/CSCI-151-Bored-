@@ -1,8 +1,5 @@
 import stdio
 import sys
-import practice_programs.hello_world
-import practice_programs.practice_sum
-import practice_programs.three_name
 
 quizzes = 25/100
 assignments = 35/100
@@ -18,11 +15,3 @@ all_policies = "\n".join(all_policies)
 
 stdio.write(all_policies)
 stdio.write("\n")
-
-# Takes a variable amount of names from the command line and prints a greeting
-if False:
-    practice_programs.three_name.print_input_names()
-
-# Adds two number
-if True:
-    practice_programs.practice_sum.print_sum() 

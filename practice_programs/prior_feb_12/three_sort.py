@@ -23,3 +23,5 @@ remove_max = args.remove(max_value)
 remove_min = args.remove(min_value)
 middle_value = args[0]
 stdio.write(f"{min_value}, {middle_value}, {max_value}\n")
+
+# Solve with if statement

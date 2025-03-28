@@ -35,10 +35,20 @@ for i in range(how_many_balls):
 d_t = 0.01
 occ_vec = -1
 theta = 0
+
+def calculate_random_velocity(random_velocity):
+    random_velocity += random.uniform(-0.05, 0.05)
+    if random_velocity < 0:
+        random_velocity = -random_velocity
+    return random_velocity
+random_vec = random.uniform(0, 2)
+
 while True:
-    occ_vec = (math.sin(theta))+1
+    random_vec = calculate_random_velocity(random_vec)
+    occ_vec = (math.sin(theta))+1.2
+    velocity_mult = random_vec
     theta += d_t
-    print(occ_vec, theta)
+    print(velocity_mult, theta)
     # # Ball One
     # if abs(rx + vx) + RADIUS > 1.0: vx = -vx
     # if abs(ry + vy) + RADIUS > 1.0: vy = -vy
@@ -53,12 +63,12 @@ while True:
     for ball in balls:
         if abs(ball[0]+ball[2]) + RADIUS > 1.0: ball[2] = -ball[2]
         if abs(ball[1]+ball[3]) + RADIUS > 1.0: ball[3] = -ball[3]
-        ball[0] = ball[0]+ball[2]*ball[4]
-        ball[1] = ball[1]+ball[3]*ball[4]
+        ball[0] = ball[0]+ball[2]*ball[4]*velocity_mult
+        ball[1] = ball[1]+ball[3]*ball[4]*velocity_mult
         stddraw.filledCircle(ball[0],ball[1],RADIUS) 
 
 
     # stddraw.clear(stddraw.GRAY)
     # stddraw.filledCircle(rx, ry, RADIUS)
     # stddraw.filledCircle(rx_2, ry_2, RADIUS)
-    stddraw.show(DT)
+    stddraw.show(100)
